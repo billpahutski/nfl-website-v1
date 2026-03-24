@@ -8,3 +8,9 @@ function showRandomImage() {
   const randomIndex = Math.floor(Math.random() * images.length);
   document.getElementById("randomImage").src = images[randomIndex];
 }
+
+window.addEventListener("load", function() {
+  const button = document.getElementById("randomBtn");
+  button.addEventListener("click", showRandomImage);
+  showRandomImage();
+});
